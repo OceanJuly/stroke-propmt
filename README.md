@@ -29,3 +29,23 @@ const pos = span.getBoundingClientRect()
 
 原理就是监听document的点击，然后通过dom.contains方法判断点击事件是否是dom元素外面
 代码我用两种方式实现：[v-click-out-side自定义指令](https://github.com/OceanJuly/stroke-propmt/blob/master/src/directives/click-out-side.ts)和手写判断实现
+
+> 如何实现气泡框左下角的小三角？
+
+可以通过`css`实现：
+```css
+.bubble::before {
+    content: '';
+    position: absolute;
+    top: 33px;
+    left: -13px;
+    /* 实现三角形的关键 */
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 25px solid #448844;
+    border-left: 25px solid transparent;
+    /* 调整角度 */
+    transform: rotate(-31deg);
+}
+```
+想要什么三角形直接调就行

@@ -4,7 +4,7 @@ const props = defineProps({
   left: String,
   btnTxt: String
 })
-const emit = defineEmits(['btnClick'])
+const emit = defineEmits(['btnMouseDown'])
 
 function handleMouseDown() {
   emit('btnMouseDown')
