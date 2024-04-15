@@ -1,5 +1,7 @@
 # 基于 Vue 3 + TypeScript + Vite 的划词提示
 
+![Alt](https://github.com/OceanJuly/stroke-propmt/blob/master/public/effect-pic.png)
+
 ### 两种实现方式
 - 基于组件实现
 - 基于自定义指令实现
@@ -26,4 +28,4 @@ const pos = span.getBoundingClientRect()
 > 鼠标点击空白处会导致选中文本取消，如何监听到这一动作？（dom外点击监听）
 
 原理就是监听document的点击，然后通过dom.contains方法判断点击事件是否是dom元素外面
-代码我用两种方式实现：v-click-out-side自定义指令和手写判断实现
+代码我用两种方式实现：[v-click-out-side自定义指令](https://github.com/OceanJuly/stroke-propmt/blob/master/src/directives/click-out-side.ts)和手写判断实现
